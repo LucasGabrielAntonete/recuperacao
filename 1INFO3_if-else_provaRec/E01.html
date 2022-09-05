@@ -1,0 +1,34 @@
+<script>
+    //PROBLEMA: Viajar para algum lugar
+    //Peça para o usuário informar para qual estado deseja realizar a viagem. (Rio Grande do Sul-RS ou Minas Gerais-MG). Peça também para informar quantos dias ficará em viagem. O usuário também deverá informar quantos dinheiros (R$) possui para gastar na viagem.
+    
+    //Considere que o custo diário de viagem para "RS" será de R$ 180,00 (180) e o custo diário de viagem para "MG" será de R$ 210,00 (210).
+    
+    //Calcule se o usuário possui dinheiro suficiente para realizar a viagem para o destino que pretende. Se o usuário puder viajar, o programa apresentará a mensagem "Boa viagem" e quantos dias poderá ficar no destino, além de qual será o custo da viagem. Caso não possa viajar o programa apresentará a mensagem "Sem Férias" e também apresentará quantos dinheiros (R$) estão faltando para realizar a viagem.
+
+    //ENTRADA
+
+    const estadoViagem = prompt("Qual estado vc pretende viajar, (RS) para Rio Grande do Sul e (MG) para Minas Gerais").toUpperCase()
+    const diasViagem = Number(prompt("Informe quantos dias vc vai ficar na viagem"))
+    const dinheiro = Number(prompt("Informe o quanto de dinheiro vc tem para a viagem"))
+
+
+    //PROCESSAMENTO
+
+    let precoViagem
+    
+    if (estadoViagem === "RS") precoViagem = diasViagem * 180
+    else if (estadoViagem === "MG") precoViagem = diasViagem * 210
+    else document.write("Estado invalido")
+
+    let resultadodinheiro = (precoViagem - dinheiro); 
+    
+
+    if (precoViagem <= dinheiro) document.write(`Boas férias, o seu custo vai ser de R$${precoViagem} `);
+    
+    else if (precoViagem > dinheiro) document.write(`Sem ferias, lhe faltam R$${resultadodinheiro}`);
+    
+
+    //SAÍDA
+
+</script>
